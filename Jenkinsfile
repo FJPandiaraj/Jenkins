@@ -6,7 +6,7 @@ pipeline {
         echo 'Hello World'
         echo 'Message 2'
         node(label: 'master') {
-          sh 'uname -a'
+          sh 'pwd && uname -a'
         }
         
       }
