@@ -21,6 +21,10 @@ pipeline {
               pwd(tmp: true)
             }
             
+            catchError() {
+              error 'Error caught'
+            }
+            
             
           }
         )
