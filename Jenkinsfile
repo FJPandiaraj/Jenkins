@@ -6,6 +6,10 @@ pipeline {
         echo 'Hello World'
         echo 'Message 2'
         sh 'uname -a'
+        node(label: 'master') {
+          sh 'uname -a'
+        }
+        
       }
     }
   }
