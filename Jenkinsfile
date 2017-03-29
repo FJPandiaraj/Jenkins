@@ -4,6 +4,8 @@ pipeline {
     stage('Example') {
       steps {
         echo 'Hello World'
+        pwd(tmp: true)
+        echo 'Message 2'
       }
     }
   }
