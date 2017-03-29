@@ -15,8 +15,12 @@ pipeline {
           },
           "MyWork": {
             echo 'This is my Work'
-            isUnix()
-            sh 'pwd && uname -a'
+            node(label: 'master') {
+              sh 'pwd && uname -a'
+              echo 'Hello'
+              pwd(tmp: true)
+            }
+            
             
           }
         )
